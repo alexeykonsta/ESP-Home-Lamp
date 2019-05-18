@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ESP Home</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap.min.css"> 
+	<link rel="stylesheet" href="stylesheet.css"> 
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>	
+	</div>
+
+	<div class="row">
+
+		<div class="sensor-data-left col-xl-3 col-lg-4 col-md-4 col-sm12">
+			<form>
+				<h3 align="center">Показания датчиков:</h3>
+				<div class="row">
+					<div class="col-8">
+						<span>Температура:</span>
+					</div>
+					<div class="col-4">
+						<input type="text" size="10" value="20.1*С" readonly>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<span>Влажность:</span>
+					</div>
+					<div class="col-4">
+						<input type="text" size="10" value="45%" readonly>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<span>Давление:</span>
+					</div>
+					<div class="col-4">
+						<input type="text" size="10" value="765mm" readonly>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<span>Высота:</span>
+					</div>
+					<div class="col-4">
+						<input type="text" size="10" value="124.1m" readonly>
+					</div>
+				</div>			
+			</form>
+		</div>
+
+
+		<div class="menu container-fluid col-xl-9 col-lg-8 col-md-8 col-sm-12">
+			<h1>Настройки модуля:</h1>
+			<form>
+
+				<div class="menu_item">
+					<div class="menu_item_title">
+						<p class="menu_item_title">Параметры подключения</p>
+					</div>
+					<div class="menu_item_body" >
+						<div class="row">
+							<h6 class="col-md-4 col-sm-12">Имя Wi-Fi сети:</h6>
+							<input class="col-md-8 col-sm-12" id="ssidName" type="text">
+						</div>
+						<div class="row">
+							<h6 class="col-md-4 col-sm-12">Пароль Wi-Fi сети:</h6>
+							<input class="col-md-8 col-sm-12" id="ssidPassword" type="password">
+						</div>
+					</div>
+				</div>
+				<div class="menu_item">
+					<div class="menu_item_title">
+						<p class="menu_item_title">Точки доступа</p>
+					</div>
+					<div class="menu_item_body" >
+						<div class="row">
+							<h6 class="col-md-4 col-sm-12">Имя Wi-Fi сети:</h6>
+							<input class="col-md-8 col-sm-12" id="ssidAPName" type="text">
+						</div>
+						<div class="row">
+							<h6 class="col-md-4 col-sm-12">Пароль Wi-Fi сети:</h6>
+							<input class="col-md-8 col-sm-12" id="ssidAPPassword" type="password">
+						</div>
+					</div>
+				</div>
+				<div class="menu_item">
+					<div class="menu_item_title">
+						<p class="menu_item_title">Часовой пояс</p>
+					</div>
+					<div class="menu_item_body" >
+						<div class="row">
+							<h6 class="col-md-4 col-sm-12">Часовой пояс:</h6>
+							<input class="col-md-8 col-sm-12" type="text">
+						</div>
+					</div>
+				</div>
+
+			</form>
+		</div>
+
+		<div class="sensor-data-right col-xl-3 col-lg-4 col-md-4 col-sm-12">
+			<form style="margin-top: 3.5rem">
+				<h3 align="center">Показания датчиков:</h3>
+				<div class="row">
+					<div class="col-8">
+						<span>Температура:</span>
+					</div>
+					<div class="col-4">
+						<input type="text" size="10" value="20.1*С" readonly>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<span>Влажность:</span>
+					</div>
+					<div class="col-4">
+						<input type="text" size="10" value="45%" readonly>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<span>Давление:</span>
+					</div>
+					<div class="col-4">
+						<input type="text" size="10" value="765mm" readonly>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+						<span>Высота:</span>
+					</div>
+					<div class="col-4">
+						<input type="text" size="10" value="124.1m" readonly>
+					</div>
+				</div>			
+			</form>
+		</div>
+
+	</div>
+</div>
+
+<script>
+
+$(function(){
+    $('.menu_item_body').hide();
+    $a = $('div.menu_item_title ');
+    $a.on('click', function(event) {
+      event.preventDefault();
+      $a.not(this).next().slideUp(500);
+      $(this).next().slideToggle(500);
+    });
+});
+
+$( document ).ready(function() {
+	var CurrentDT
+	$.ajax({
+		url: '/config',
+		success: function(data) {
+			$('#ssidName').val(data.ssidName);
+			$('#ssidPassword').val(data.ssidPassword);
+			$('#ssidAPName').val(data.ssidAPName);
+			$('#ssidAPPassword').val(data.ssidAPPassword);
+		}
+	});
+	
+	$.ajax({
+		url: '/unixtimestamp',
+		success: function(data) {
+			console.log(data);
+			console.log(data.unixtimestamp);
+			var CurrentDT = new Date (data.unixtimestamp*1000)
+			console.log(CurrentDT);
+			console.log(CurrentDT.toJSON());
+		}
+	});	
+	
+});
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
