@@ -164,6 +164,10 @@ $(function(){
     $a = $('div.menu_item_title ');
     $a.on('click', function(event) {
       event.preventDefault();
+			console.log($a);
+			console.log($a.not(this));
+			console.log($a.not(this).next());
+			console.log($(this).next());
       $a.not(this).next().slideUp(500);
       $(this).next().slideToggle(500);
     });

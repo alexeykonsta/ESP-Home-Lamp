@@ -1,0 +1,162 @@
+p.col-1 {
+	color: white;
+	font-size: 1.25rem;
+	border: 1px solid red;
+}
+
+[class^=col-] {
+	padding: 5px;
+}
+
+.row {
+	margin: 10px;
+}
+
+span {
+	padding: 0px !important;
+	display: flex;
+}
+
+body {
+	background-color: rgb(30,30,30);
+	font-family: -apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		"Helvetica Neue",
+		Arial,
+		"Noto Sans",
+		sans-serif,
+		"Apple Color Emoji",
+		"Segoe UI Emoji",
+		"Segoe UI Symbol",
+		"Noto Color Emoji";
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: rgb(225, 225, 225);
+	text-align: center;
+	
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2.5rem;		
+}
+
+h3 {
+	margin: -2px;
+	padding: 5px;
+	font-size: 1.75rem;
+	border: 2px solid rgb(225, 225, 225);
+	border-radius: 10px;
+}
+
+h6 {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;	
+	font-size: 1.25rem;
+	width: 100%;
+	padding: 5px;
+}
+
+label {
+	color: rgb(225, 225, 225);
+}
+
+form {
+	padding: 0 !important;
+	margin: 0px 5px !important;
+	background-color: rgb(80,80,80);
+	border: 2px solid rgb(100,100,100);
+	border-radius: 10px;
+	box-shadow:
+		1px 0px rgb(98,98,98), 1px 1px rgb(90,90,90),
+		2px 1px rgb(94,94,94), 2px 2px rgb(80,80,80),
+		3px 2px rgb(90,90,90), 3px 3px rgb(70,70,70),
+		4px 3px rgb(86,86,86), 4px 4px rgb(60,60,60),
+		5px 4px rgb(82,82,82), 5px 5px rgb(50,50,50);
+}
+
+li {
+	list-style-type: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.menu_item {
+	margin: 5px;
+	border: 2px solid rgb(225, 225, 225);
+	border-radius: 10px;
+}
+
+img {
+	width: 1rem;
+	height: 1rem;
+	vertical-align: top;
+	margin-top: 0.1rem;
+	margin-left: 0.5rem;
+}
+
+input, select{
+	padding: 5px;
+	font-size: 1rem;
+	outline: none;
+	color: rgb(225, 225, 225);
+}
+
+input[type="text"], input[type="password"], select{
+	background-color: rgb(55,55,55);
+	border: 2px solid rgb(60, 60, 60);
+	border-radius: 15px;
+	box-shadow:
+		1px 0px rgb(70,70,70), 1px 1px rgb(62,72,72),
+		2px 1px rgb(75,75,75), 2px 2px rgb(66,76,76),
+		3px 2px rgb(80,80,80), 3px 3px rgb(72,72,72);	
+}
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+}
+
+input[type="checkbox"] {
+	height: 100%;
+}
+
+/*select, option {
+	width: 33%;
+	text-align: center;
+	text-align-last: center;
+}*/
+
+label {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	white-space: nowrap;
+	color: rgb(225, 225, 225);
+}
+
+input[type="button"] {
+	width: 100%;
+	/*margin: 0;*/
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.2;
+	
+	font-size: 1.75rem;
+	margin-right:-2px;
+	border-radius: 10px;
+	border-color: rgb(150, 150, 150);
+	background-color: rgb(150, 150, 150);
+}
+
+input [type="button"]:disabled {
+	background-color: rgb(55, 55, 55);
+}

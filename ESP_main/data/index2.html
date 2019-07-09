@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ESP Home</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap-grid.css"> 
+	<link rel="stylesheet" href="stylesheet2.css"> 
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<div class="row">
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>
+		<p class="col-1">col-1</p>	
+	</div>
+	
+	<div id="header">
+		<h1 class="col-xl-9 col-lg-8 col-md-8 col-sm-12">Настройки модуля:</h1>
+	</div>
+	
+	<div id="content">
+		<form class="menu col-xl-9 col-lg-8 col-md-8 col-sm-12">
+			<ul>
+				<li class="menu_item">
+					<h3>Wi-Fi сеть</h3>
+
+					<div class="row">
+						<span class="row_title col-md-4 col-sm-12">
+							<h6>Имя Wi-Fi сети:<img src="hint.png"></h6>
+						</span>
+						<span class="row_input col-md-8 col-sm-12">
+							<input id="ssidName" type="text">
+						</span>
+					</div>
+					
+					<div class="row">
+						<span class="row_title col-md-4 col-sm-12">
+							<h6>Пароль Wi-Fi сети:<img src="hint.png"></h6>
+						</span>						
+						<span class="row_input col-md-8 col-sm-12">
+							<input id="ssidPassword" type="password">
+							<input type="checkbox" id="ShowPassword">
+							<label>Показать пароль</label>
+						<span>						
+					</div>					
+
+					<div class="row">
+						<span class="row_title col-md-4 col-sm-12">
+							<h6>Имя точки доступа:<img src="hint.png"></h6>
+						</span>
+						<span class="row_input col-md-8 col-sm-12">
+							<input id="ssidName" type="text">
+						</span>
+					</div>
+					
+					<div class="row">
+						<span class="row_title col-md-4 col-sm-12">
+							<h6>Пароль точки доступа:<img src="hint.png"></h6>
+						</span>						
+						<span class="row_input col-md-8 col-sm-12">
+							<input id="ssidPassword" type="password">
+							<input type="checkbox" id="ShowPassword">
+							<label>Показать пароль</label>
+						<span>						
+					</div>	
+	
+				</li>
+				<li class="menu_item">
+					<h3>Время и часовой пояс</h3>
+
+					<div class="row">
+						<span class="row_title col-md-4 col-sm-12">
+							<h6>Дата:<img src="hint.png"></h6>
+						</span>
+						<span class="row_input col-md-8 col-sm-12">
+							<input id="date" type="text" disabled>
+						</span>
+					</div>					
+					
+					<div class="row">
+						<span class="row_title col-md-4 col-sm-12">
+							<h6>Время:<img src="hint.png"></h6>
+						</span>
+						<span class="row_input col-md-8 col-sm-12">
+							<input id="time" type="text" disabled>
+						</span>
+					</div>
+					
+					<div class="row">
+						<span class="row_title col-md-4 col-sm-12">
+							<h6>Часовой пояс:<img src="hint.png"></h6>
+						</span>
+						<span class="row_input col-md-8 col-sm-12">
+							<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</span>
+					</div>					
+					
+				</li>
+				<li class="menu_item">
+					<h3>Будильники</h3>
+				</li>
+				<li class="menu_item">
+					<input type="button" value="Сохранить изменения" disabled>
+				</li>
+				<li class="menu_item">
+					<input type="button" value="Сохранить изменения">
+				</li>				
+			<ul>
+			<input type="button" value="Сохранить изменения">
+		</form>
+	</div>
+	
+	<div id="footer">
+	</div>
+	
+</body>
