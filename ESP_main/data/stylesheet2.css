@@ -144,19 +144,23 @@ label {
 }
 
 input[type="button"] {
-	width: 100%;
-	/*margin: 0;*/
+
 	font-family: inherit;
 	font-weight: 500;
 	line-height: 1.2;
 	
 	font-size: 1.75rem;
-	margin-right:-2px;
+	border: 2px solid;
 	border-radius: 10px;
-	border-color: rgb(150, 150, 150);
+	border-color: rgb(225, 225, 225);
 	background-color: rgb(150, 150, 150);
 }
 
-input [type="button"]:disabled {
-	background-color: rgb(55, 55, 55);
+.save_button {
+	margin: -2px;
+	width: calc(100% + 4px);
+}
+
+.add_alarm_button {
+	margin: -2px auto;
 }
